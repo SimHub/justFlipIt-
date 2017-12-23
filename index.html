@@ -291,88 +291,90 @@
 <script src="src/justFlipIt.min.js"></script>
 
 <script>
+    $(function () {
 
-    $('.hover').justFlipIt({
-        Style: [{el: 'self', style: {'margin': '0 auto', 'cursor': 'pointer'}}],
-        Template: '            <div class="ui red card " style="margin:0 auto;">\n' +
-        '                                <div class="image ">\n' +
-        '                                    <img src="img/matthew.png">\n' +
-       ' <div class="extra content" style="background: black;">\n' +
-    '                   <div style="color:white;text-align:center">$("[elenemtName]").justFlipIt({' +
-    '                   Click:[\'elementName\'\]' +
-    '                   ); </div>' +
-        '                                </div>\n' +
+        $('.hover').justFlipIt({
+            Style: [{el: 'self', style: {'margin': '0 auto', 'cursor': 'pointer'}}],
+            Template: '            <div class="ui red card " style="margin:0 auto;">\n' +
+            '                                <div class="image ">\n' +
+            '                                    <img src="img/matthew.png">\n' +
+            ' <div class="extra content" style="background: black;">\n' +
+            '                   <div style="color:white;text-align:center">$("[elenemtName]").justFlipIt({' +
+            '                   Click:[\'elementName\'\]' +
+            '                   ); </div>' +
+            '                                </div>\n' +
 
-        '                </div>\n' +
-        '                            </div>'
+            '                </div>\n' +
+            '                            </div>'
+        });
+
+        $('.click').justFlipIt({
+            Click: true,
+            Style: [{el: 'self', style: {'margin': '0 auto', 'cursor': 'pointer'}}],
+            Template: '<div class="ui card" style="margin: 0 auto">\n' +
+            '      <div class="image ">\n' +
+            '              <img src="img/stevie.jpg">' +
+            '      </div>\n' +
+            '                <div class="extra content" style="position: absolute;' +
+            '                                                  background: black;' +
+            '                                                  width: 100%;' +
+            '                                                  top: 250px;">' +
+            '                   <div style="color:white;text-align:center">$("[elementName]").justFlipIt(); </div>' +
+            '                    </div>\n' +
+            '                </div>\n' +
+
+            '  </div> <br>',
+        });
+
+        $('.specifyClick').justFlipIt({
+            Click: '.flip-here',
+            Style: [{el: 'self', style: {'margin': '0 auto', 'cursor': 'pointer'}}],
+            Template: '<div class="ui card ">\n' +
+            '                <div class="content">\n' +
+            '                        <a class="flip-here" style="cursor:alias">\n' +
+            '                            <img class="ui avatar image " src="img/jenny.jpg" alt="avatar">\n' +
+            '                            <em><strong style="color: #a4363b;">Click here</strong></em></a>\n' +
+            '                    <div class="meta">\n' +
+            '                        <span class="category"></span>\n' +
+            '                    </div>\n' +
+            '                    <div class="description">\n' +
+            '                    </div>\n' +
+            '                </div>\n' +
+            '                <div class="image ">' +
+            '                   <img src="img/stevie.jpg">' +
+            '                <div class="extra content" style="background: black;">\n' +
+            '                   <div style="color:white;text-align:center">$("[elenemtName]").justFlipIt({' +
+            '                   Click:[\'elementName\'\]' +
+            '                   ); </div>' +
+            '                </div>\n' +
+            '            </div>' +
+            '        </div>'
+        });
+
+        $('.template').justFlipIt({
+            Click: true,
+            Style: [{el: 'self', style: {'margin': '0 auto', 'cursor': 'pointer'}}],
+            Template: '<div style="cursor: alias;height: 290px;width:290px" class="ui card">\n' +
+            '            <div class="content">\n' +
+            '                <a class="header">BACK SITE</a>\n' +
+            '                <div class="meta">\n' +
+            '                    <span class="date">Joined in 2014</span>\n' +
+            '                </div>\n' +
+            '                <div class="description">\n' +
+            '                    Stevie Feliciano is a library scientist living in New York City. She likes to spend her time\n' +
+            '                    reading,\n' +
+            '                    running, and writing.\n' +
+            '                </div>\n' +
+            '            </div>\n' +
+            '            <div class="extra content" style="background: black">\n' +
+            '                   <div style="color:white;text-align:center">$("[elenemtName]").justFlipIt({' +
+            '                   Template:[html]' +
+            '                   ); </div>' +
+            '            </div>\n' +
+            '        </div>'
+        });
+
     });
-
-    $('.click').justFlipIt({
-        Click: true,
-        Style: [{el: 'self', style: {'margin': '0 auto', 'cursor': 'pointer'}}],
-        Template: '<div class="ui card" style="margin: 0 auto">\n' +
-        '      <div class="image ">\n' +
-        '              <img src="img/stevie.jpg">' +
-        '      </div>\n' +
-        '                <div class="extra content" style="position: absolute;' +
-        '                                                  background: black;' +
-        '                                                  width: 100%;' +
-        '                                                  top: 250px;">' +
-        '                   <div style="color:white;text-align:center">$("[elementName]").justFlipIt(); </div>' +
-        '                    </div>\n' +
-        '                </div>\n' +
-
-        '  </div> <br>',
-    });
-
-    $('.specifyClick').justFlipIt({
-        Click: '.flip-here',
-        Style: [{el: 'self', style: {'margin': '0 auto', 'cursor': 'pointer'}}],
-        Template: '<div class="ui card ">\n' +
-        '                <div class="content">\n' +
-        '                        <a class="flip-here" style="cursor:alias">\n' +
-        '                            <img class="ui avatar image " src="img/jenny.jpg" alt="avatar">\n' +
-        '                            <em><strong style="color: #a4363b;">Click here</strong></em></a>\n' +
-        '                    <div class="meta">\n' +
-        '                        <span class="category"></span>\n' +
-        '                    </div>\n' +
-        '                    <div class="description">\n' +
-        '                    </div>\n' +
-        '                </div>\n' +
-        '                <div class="image ">'+
-        '                   <img src="img/stevie.jpg">'+
-        '                <div class="extra content" style="background: black;">\n' +
-        '                   <div style="color:white;text-align:center">$("[elenemtName]").justFlipIt({' +
-        '                   Click:[\'elementName\'\]' +
-        '                   ); </div>' +
-        '                </div>\n' +
-        '            </div>'+
-'        </div>'
-    });
-
-    $('.template').justFlipIt({
-        Click: true,
-        Style: [{el: 'self', style: {'margin': '0 auto', 'cursor': 'pointer'}}],
-        Template: '<div style="cursor: alias;height: 290px;width:290px" class="ui card">\n' +
-        '            <div class="content">\n' +
-        '                <a class="header">BACK SITE</a>\n' +
-        '                <div class="meta">\n' +
-        '                    <span class="date">Joined in 2014</span>\n' +
-        '                </div>\n' +
-        '                <div class="description">\n' +
-        '                    Stevie Feliciano is a library scientist living in New York City. She likes to spend her time\n' +
-        '                    reading,\n' +
-        '                    running, and writing.\n' +
-        '                </div>\n' +
-        '            </div>\n' +
-        '            <div class="extra content" style="background: black">\n' +
-        '                   <div style="color:white;text-align:center">$("[elenemtName]").justFlipIt({' +
-        '                   Template:[html]' +
-        '                   ); </div>' +
-        '            </div>\n' +
-        '        </div>'
-    });
-
 </script>
 </body>
 </html>
