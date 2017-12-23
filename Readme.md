@@ -3,7 +3,7 @@
 
   Documentation && Live demo: http://simhub.github.io/justFlipIt/  
 
-#TESTING GH-PAGES
+#TESTING  NEW GH-PAGES
 #Size 
     justFlipIt.min.js  -  3 KB
   
