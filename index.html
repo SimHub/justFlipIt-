@@ -292,40 +292,6 @@
 <script>
     $(function () {
 
-        function isMobileDevice() {
-            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-        };
-
-//        if (!isMobileDevice()) {
-//            $('#isMobile').append('  <div class="flipWrapper">\n' +
-//                '                        <div style="text-align: center" class="hover">\n' +
-//                '                            <div class="ui red card " style="margin:0 auto;">\n' +
-//                '                                <div class="image ">\n' +
-//                '                                    <img src="img/kristy.png">\n' +
-//                '                                </div>\n' +
-//                '                            </div>\n' +
-//                '                        </div>\n' +
-//                '                    </div>\n');
-//
-//            console.log(isMobileDevice());
-//
-//            $('.hover').hover().justFlipIt({
-//                Style: [{el: 'self', style: {'margin': '0 auto', 'cursor': 'pointer'}}],
-//                Template: '            <div class="ui red card " style="margin:0 auto;">\n' +
-//                '                                <div class="image ">\n' +
-//                '                                    <img src="img/matthew.png">\n' +
-//                ' <div class="extra content" style="background: black;">\n' +
-//                '                   <div style="color:white;text-align:center">$("[elenemtName]").justFlipIt({' +
-//                '                   Click:[\'elementName\'\]' +
-//                '                   ); </div>' +
-//                '                                </div>\n' +
-//
-//                '                </div>\n' +
-//                '                            </div>'
-//            });
-//        }
-
-
         $('.click').justFlipIt({
             Click: true,
             Style: [{el: 'self', style: {'margin': '0 auto', 'cursor': 'pointer'}}],
