@@ -112,11 +112,11 @@
             <thead>
             <tr>
                 <th style="text-align: center;color: rosybrown">SPECIFIED CLICK EVENT</th>
-                <th style="text-align: center;color: rosybrown">HOVER EVENT</th>
+                <!--<th style="text-align: center;color: rosybrown">HOVER EVENT</th>-->
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr id="isMobile">
                 <td>
                     <div class="flipWrapper">
                         <div style="text-align: center" class="specifyClick">
@@ -135,18 +135,6 @@
                         </div>
                     </div>
                 </td>
-                <td>
-                    <div class="flipWrapper">
-                        <div style="text-align: center" class="hover">
-                            <div class="ui red card " style="margin:0 auto;">
-                                <div class="image ">
-                                    <img src="img/kristy.png">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-
             </tr>
 
             </tbody>
@@ -175,6 +163,17 @@
                 </tr>
                 </thead>
                 <tbody>
+                <tr>
+                    <td style="text-align: center">---</td>
+                    <td class="warning" style="text-align: center">---</td>
+                    <td class="positive" style="text-align: center">---</td>
+                    <td>
+                        This is the default <u><i>HOVER</i></u> event!<br>
+                        <code>
+                            $('[elementName]').justFlipIt();
+                        </code>
+                    </td>
+                </tr>
                 <tr>
                     <td><h4>Click</h4></td>
                     <td class="warning"><h4>false && true && '[elementName]'</h4></td>
@@ -293,20 +292,39 @@
 <script>
     $(function () {
 
-        $('.hover').justFlipIt({
-            Style: [{el: 'self', style: {'margin': '0 auto', 'cursor': 'pointer'}}],
-            Template: '            <div class="ui red card " style="margin:0 auto;">\n' +
-            '                                <div class="image ">\n' +
-            '                                    <img src="img/matthew.png">\n' +
-            ' <div class="extra content" style="background: black;">\n' +
-            '                   <div style="color:white;text-align:center">$("[elenemtName]").justFlipIt({' +
-            '                   Click:[\'elementName\'\]' +
-            '                   ); </div>' +
-            '                                </div>\n' +
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        };
 
-            '                </div>\n' +
-            '                            </div>'
-        });
+//        if (!isMobileDevice()) {
+//            $('#isMobile').append('  <div class="flipWrapper">\n' +
+//                '                        <div style="text-align: center" class="hover">\n' +
+//                '                            <div class="ui red card " style="margin:0 auto;">\n' +
+//                '                                <div class="image ">\n' +
+//                '                                    <img src="img/kristy.png">\n' +
+//                '                                </div>\n' +
+//                '                            </div>\n' +
+//                '                        </div>\n' +
+//                '                    </div>\n');
+//
+//            console.log(isMobileDevice());
+//
+//            $('.hover').hover().justFlipIt({
+//                Style: [{el: 'self', style: {'margin': '0 auto', 'cursor': 'pointer'}}],
+//                Template: '            <div class="ui red card " style="margin:0 auto;">\n' +
+//                '                                <div class="image ">\n' +
+//                '                                    <img src="img/matthew.png">\n' +
+//                ' <div class="extra content" style="background: black;">\n' +
+//                '                   <div style="color:white;text-align:center">$("[elenemtName]").justFlipIt({' +
+//                '                   Click:[\'elementName\'\]' +
+//                '                   ); </div>' +
+//                '                                </div>\n' +
+//
+//                '                </div>\n' +
+//                '                            </div>'
+//            });
+//        }
+
 
         $('.click').justFlipIt({
             Click: true,
