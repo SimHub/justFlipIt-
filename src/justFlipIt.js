@@ -221,12 +221,20 @@
       } else {
         self = $(this).find('.front');
       }
-      self.unwrap();
-      self.next().remove();
-      $(self.firstChild)
-        .attr('class', objElement.oldClasses)
-        .unwrap();
-      self.removeData('plugin_' + pluginName);
+      if (self.siblings().hasClass(objElement.backClass)) {
+        self.siblings().remove();
+        self
+          .children().attr('class',objElement.oldClasses)
+          .unwrap()
+          .unwrap();
+      } else {
+        self.unwrap();
+        self.next().remove();
+        $(self.firstChild)
+          .attr('class', objElement.oldClasses)
+          .unwrap();
+      }
+      $.removeData(this,'plugin_' + pluginName);
     });
   };
 })(jQuery, window, document);
