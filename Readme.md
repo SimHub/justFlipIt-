@@ -1,4 +1,4 @@
-## A simple and lightning fast jQuery plugin  
+### A simple and lightning fast jQuery plugin  
 [![Travis](https://img.shields.io/travis/SimHub/justFlipIt.svg?style=flat-square)](https://travis-ci.org/SimHub/justFlipIt)  [![npm](https://img.shields.io/npm/dt/justflipit.svg?style=flat-square)](https://www.npmjs.com/package/justflipit) [![npm](https://img.shields.io/npm/v/justflipit.svg?style=flat-square)](https://www.npmjs.com/package/justflipit)  [![npm](https://img.shields.io/npm/l/justflipit.svg?style=flat-square)](https://www.npmjs.com/package/justflipit)   [![GitHub forks](https://img.shields.io/github/forks/SimHub/justFlipIt.svg?style=social&label=Fork&style=flat-square&style=flat-square)](https://img.shields.io/github/forks/SimHub/justFlipIt) [![Bower](https://img.shields.io/bower/l/justFlipIt.svg?style=social&label=Bower&style=flat-square&style=flat-square)](https://bower.io/search/)  
 
 
@@ -9,8 +9,8 @@
   Moreover, the plugin allow you to create backside of the card dynamically. All elements of the plugin can be customized with CSS.
 
 
-## Demo - Documentation
- #### [_GO HERE_ ->](http://simhub.github.io/justFlipIt/) 
+### Demo - Documentation
+ ### [_GO HERE_ ->](http://simhub.github.io/justFlipIt/) 
   
 # Install  
 
